@@ -29,9 +29,9 @@ class Student{
     String getMajor(){
         return major;
     }
-    void getPhone(){
+    String getPhone(){
         String s = Long.toString(phone);
-        System.out.printf("010-%s-%s", s.substring(2,6), s.substring(6));
+        return "010-"+s.substring(2,6)+"-"+s.substring(6);
     }
 }
 
@@ -54,15 +54,12 @@ public class Homework2 {
         System.out.println();
         System.out.println("입력된 학생들의 정보는 다음과 같습니다.");
 
-        System.out.printf("첫번째 학생: %d %s %s ", studentArray[0].getId(), studentArray[0].getName(), studentArray[0].getMajor());
-        studentArray[0].getPhone();
+        System.out.printf("첫번째 학생: %d %s %s %s", studentArray[0].getId(), studentArray[0].getName(), studentArray[0].getMajor(), studentArray[0].getPhone());
         System.out.println();
 
-        System.out.printf("두번째 학생: %d %s %s ", studentArray[1].getId(), studentArray[1].getName(), studentArray[1].getMajor());
-        studentArray[1].getPhone();
+        System.out.printf("두번째 학생: %d %s %s %s", studentArray[1].getId(), studentArray[1].getName(), studentArray[1].getMajor(), studentArray[1].getPhone());
         System.out.println();
 
-        System.out.printf("세번째 학생: %d %s %s ", studentArray[2].getId(), studentArray[2].getName(), studentArray[2].getMajor());
-        studentArray[2].getPhone();
+        System.out.printf("세번째 학생: %d %s %s %s", studentArray[2].getId(), studentArray[2].getName(), studentArray[2].getMajor(), studentArray[2].getPhone());
     }
 }
